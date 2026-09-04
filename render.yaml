@@ -1,0 +1,19 @@
+﻿services:
+  - type: web
+    name: face-attendance-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ADMIN_DEFAULT_PASSWORD
+        value: admin123
+      - key: ALLOWED_ORIGINS
+        value: https://face-attendance.vercel.app
+      - key: DATABASE_URL
+        value: sqlite:///./attendance.db
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "10080"
+    healthCheckPath: /api/health

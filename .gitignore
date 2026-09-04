@@ -1,0 +1,72 @@
+﻿# ==============================================================================
+# Face Detection Attendance System — .gitignore
+# ==============================================================================
+
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+pip-log.txt
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ----- Environment & secrets -----
+.env
+*.env
+!.env.example
+
+# ----- Database files -----
+*.db
+*.sqlite
+*.sqlite3
+
+# ----- ML Models (large binaries — download via script) -----
+backend/app/recognition/models/*.onnx
+
+# ----- Logs -----
+*.log
+logs/
+
+# ----- Node / Frontend -----
+node_modules/
+frontend/dist/
+frontend/.vite/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ----- Docker volumes -----
+docker-volumes/
+postgres-data/
+
+# ----- OS -----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----- IDE -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ----- Test artifacts -----
+test_*.db
+.hypothesis/
